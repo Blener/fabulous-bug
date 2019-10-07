@@ -15,7 +15,8 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>FabulousBugSample.iOS</AssemblyName>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -147,6 +148,10 @@
   <Import Project="..\packages\Xamarin.Forms.4.1.0.555618\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.4.1.0.555618\build\Xamarin.Forms.targets')" />
   <Import Project="..\.nuget\NuGet.targets" />
   <ItemGroup>
+    <Reference Include="Fabulous, Version=0.50.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Fabulous.0.50.0-alpha.2\lib\netstandard2.0\Fabulous.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -174,9 +179,6 @@
     <Reference Include="Xamarin.Essentials">
       <HintPath>..\packages\Xamarin.Essentials.1.1.0\lib\monoandroid71\Xamarin.Essentials.dll</HintPath>
     </Reference>
-    <Reference Include="Fabulous">
-      <HintPath>..\packages\Fabulous.0.41.1\lib\netstandard2.0\Fabulous.dll</HintPath>
-    </Reference>
     <Reference Include="Fabulous.LiveUpdate">
       <HintPath>..\packages\Fabulous.LiveUpdate.0.41.1\lib\netstandard2.0\Fabulous.LiveUpdate.dll</HintPath>
     </Reference>
@@ -187,7 +189,7 @@
       <HintPath>..\packages\Fabulous.XamarinForms.LiveUpdate.0.41.1\lib\netstandard2.0\Fabulous.XamarinForms.LiveUpdate.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets" Condition="Exists('$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets')"/>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets" Condition="Exists('$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.FSharp.targets')" />
   <ItemGroup>
     <ProjectReference Include="..\FabulousBugSample\FabulousBugSample.fsproj">
       <Project>{135553FE-F50C-4376-82AA-0E7D7F716754}</Project>

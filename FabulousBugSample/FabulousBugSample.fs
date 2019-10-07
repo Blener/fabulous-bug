@@ -53,7 +53,7 @@ module App =
 
     let view (model: Model) dispatch =
         let attachChangeEvent condition changeEvent =
-            if condition then debounce 250 changeEvent |> Some
+            if condition then changeEvent |> Some
             else None
         
         let attachChangeEvent = attachChangeEvent true 
